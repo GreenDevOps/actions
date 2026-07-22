@@ -10,5 +10,5 @@ jobs:
             
             - name: Run a second multiline command
               run: |
-              python -v
+              python3 -v
               ruby -v
