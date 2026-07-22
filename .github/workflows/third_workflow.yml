@@ -6,9 +6,10 @@ jobs:
         steps:
             - name: List files in the current directory
               run: |
-                ls -la
-                uname -a
-                id
+                  ls -la
+                  uname -a
+                  id
+                  env
             - uses: actions/checkout@v7
             - name: List files after checkout
               run: ls -la
