@@ -7,3 +7,8 @@ jobs:
         steps:
             - name: Print some text
               run: echo "Hello, World!"
+            
+            - name: Run a second multiline command
+              run: |
+              python -v
+              ruby -v
