@@ -1,0 +1,14 @@
+name: Third Workflow
+on: push
+jobs:
+    run-first-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: List files in the current directory
+              run: |
+                ls -la
+                uname -a
+                id
+            - uses: actions/checkout@v7
+            - name: List files after checkout
+              run: ls -la
