@@ -1,0 +1,14 @@
+name: Eights Workflow
+on:
+    workflow_dispatch:
+        inputs:
+            name:
+                description: "Your name"
+                required: true
+                default: "World"
+jobs:
+    run-first-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print some text
+              run: echo "Hello, ${{ github.event.inputs.name }}!"]
