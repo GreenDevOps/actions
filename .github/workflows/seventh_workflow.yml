@@ -1,0 +1,10 @@
+name: Seventh Workflow
+on:
+    schedule:
+        - cron: "*/2 * * * *"
+jobs:
+    show_datetime:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show current date and time
+              run: date
