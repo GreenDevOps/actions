@@ -2,7 +2,7 @@ name: Eights Workflow
 on:
     workflow_dispatch:
         inputs:
-            nanumber:
+            number:
                 description: "Your number"
                 type: number
                 required: true
