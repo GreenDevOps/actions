@@ -2,13 +2,14 @@ name: Eights Workflow
 on:
     workflow_dispatch:
         inputs:
-            name:
-                description: "Your name"
+            nanumber:
+                description: "Your number"
+                type: number
                 required: true
-                default: "World"
+                default: "5"
 jobs:
     run-first-command:
         runs-on: ubuntu-latest
         steps:
             - name: Print some text
-              run: echo "Hello, ${{ github.event.inputs.name }}!"]
+              run: echo "Hello, ${{ github.event.inputs.name }}!"
