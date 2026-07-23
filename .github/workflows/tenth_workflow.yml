@@ -1,5 +1,6 @@
 name: Ten Workflow
 on: [push]
+run-name: Run a command to show contexts and expressions
 
 jobs:
     run-first-command:
