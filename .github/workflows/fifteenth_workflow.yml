@@ -12,3 +12,15 @@ jobs:
               with:
                   name: uuid-artifact
                   path: uuid.txt
+    second-command:
+        runs-on: ubuntu-latest
+        needs: run-first-command
+        steps:
+            - name: Download UUID file artifact
+              uses: actions/download-artifact@v3
+              with:
+                  name: uuid-artifact
+            - name: Show UUID file contents
+              run: |
+                  v=$(cat vuuid.txt)
+                  echo "UUID file contents: $v"
