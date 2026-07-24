@@ -22,5 +22,5 @@ jobs:
                   name: uuid-artifact
             - name: Show UUID file contents
               run: |
-                  v=$(cat vuuid.txt)
+                  v=$(cat uuid.txt)
                   echo "UUID file contents: $v"
