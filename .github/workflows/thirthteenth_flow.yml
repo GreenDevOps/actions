@@ -1,5 +1,6 @@
 name: Thirteenth Workflow
 on: [push]
+run-name: Run Thirteenth Workflow - job status functions
 
 jobs:
     # success() failure() cancelled() skipped() always()
@@ -7,7 +8,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Run a command that cancelled
-              run: sleep 30
+              run: exit 1
             - name: Runs on cancelled
               if: ${{ cancelled() }}
               run: echo "This job was cancelled"
