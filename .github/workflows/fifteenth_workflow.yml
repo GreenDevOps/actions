@@ -8,7 +8,7 @@ jobs:
               run: |
                   uuidgen > uuid.txt
             - name: Upload UUID file as artifact
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v7
               with:
                   name: uuid-artifact
                   path: uuid.txt
