@@ -1,0 +1,17 @@
+name: Eleven Workflow
+on: [push]
+run-name: Run Eleven Workflow
+env:
+    WF_CUSTOM_VAR1: WF 555
+jobs:
+    run-first-command:
+        runs-on: ubuntu-latest
+        env:
+            JOB_CUSTOM_VAR1: JOB 111
+        steps:
+            - name: Vars
+              run: |
+                  echo "GITHUB_REF=$GITHUB_REF"
+                  echo "From Context: ${{ github.ref }}"
+                  echo "WF_CUSTOM_VAR1=$WF_CUSTOM_VAR1"
+                  echo "JOB_CUSTOM_VAR1=$JOB_CUSTOM_VAR1"
