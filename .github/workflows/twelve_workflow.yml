@@ -5,6 +5,25 @@ run-name: Run Twelve Workflow
 jobs:
     run-first-command:
         runs-on: ubuntu-latest
+        environtment: prod
+            ENV_CUSTOM_VAR1: ENV 222
+        steps:
+            - name: Vars
+              run: |
+                  echo "vars.login=${{ vars.login }}"
+                  echo "secrets.password=${{ secrets.password }}"
+    run-first-command:
+        runs-on: ubuntu-latest
+            ENV_CUSTOM_VAR1: ENV 222
+        steps:
+            - name: Vars
+              run: |
+                  echo "vars.login=${{ vars.login }}"
+                  echo "secrets.password=${{ secrets.password }}"
+    run-third-command:
+        runs-on: ubuntu-latest
+        environtment: test
+            ENV_CUSTOM_VAR1: ENV 222
         steps:
             - name: Vars
               run: |
