@@ -1,0 +1,14 @@
+name: Fifteenth Workflow
+on: [push]
+jobs:
+    run-first-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: UUIDGenerator
+              run: |
+                  uuidgen > uuid.txt
+            - name: Upload UUID file as artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: uuid-artifact
+                  path: uuid.txt
