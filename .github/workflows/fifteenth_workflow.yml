@@ -17,7 +17,7 @@ jobs:
         needs: run-first-command
         steps:
             - name: Download UUID file artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v7
               with:
                   name: uuid-artifact
             - name: Show UUID file contents
