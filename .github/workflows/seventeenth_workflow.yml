@@ -9,9 +9,6 @@ on:
                 default: "Default Title"
 jobs:
     call-workflow:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Call Reusable Workflow
-              uses: "./.github/workflows/workflow.yml"
+        uses: "./.github/workflows/workflow.yml"
               with:
                   title: ${{ inputs.title }}
