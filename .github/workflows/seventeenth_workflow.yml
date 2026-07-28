@@ -8,7 +8,10 @@ on:
                 type: string
                 default: "Default Title"
 jobs:
-    - name: Call Reusable Workflow
-      uses: ./.github/workflows/workflow.yml
-      with:
-          title: ${{ inputs.title }}
+    call-workflow:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Call Reusable Workflow
+              uses: "./.github/workflows/workflow.yml"
+              with:
+                  title: ${{ inputs.title }}
