@@ -1,16 +1,16 @@
 name: Reusable Workflow
 on:
-  workflow_call:
-    inputs:
-      title:
-        description: 'The title to use in the workflow'
-        required: false
-        type: string
-        default: 'Default Title'
+    workflow_call:
+        inputs:
+            title:
+                description: "The title to use in the workflow"
+                required: false
+                type: string
+                default: "Default Title"
 
 jobs:
-  conslole-log:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Call workflow with title input
-        run: echo "The title is: ${{ github.event.inputs.title }}"
+    conslole-log:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Call workflow with title input
+              run: 'echo "The title is: ${{ github.event.inputs.title }}"'
