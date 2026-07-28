@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call workflow with title input
-        run: echo "The title is: ${{ inputs.title }}"
+        run: echo "The title is: ${{ github.event.inputs.title }}"
