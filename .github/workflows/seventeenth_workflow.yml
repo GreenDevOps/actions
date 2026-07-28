@@ -10,5 +10,5 @@ on:
 jobs:
     call-workflow:
         uses: "./.github/workflows/workflow.yml"
-              with:
-                  title: ${{ inputs.title }}
+        with:
+            title: ${{ inputs.title }}
