@@ -1,12 +1,12 @@
 name: Seventeenth Workflow
 on:
     workflow_dispatch:
-        # inputs:
-        #     title:
-        #         description: "The title to use in the workflow"
-        #         required: false
-        #         type: string
-        #         default: "Default Title"
+        inputs:
+            title:
+                description: "The title to use in the workflow"
+                required: false
+                type: string
+                default: "Default Title"
 jobs:
     call-workflow:
         uses: "./.github/workflows/workflow.yml"
