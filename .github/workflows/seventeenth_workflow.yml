@@ -12,3 +12,7 @@ jobs:
         uses: "./.github/workflows/workflow.yml"
         with:
             title: ${{ github.event.inputs.title }}
+    call-external-workflow:
+        uses: "GreenDevOps/workflows/.github/workflows/external_workflow.yml@main"
+        secrets:
+            PASSWORD: ${{ secrets.PASSWORD }}
