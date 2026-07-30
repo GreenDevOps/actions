@@ -17,4 +17,8 @@ jobs:
                       Repository: ${{ github.repository }}
 
                       See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+<<<<<<< HEAD
                       bla-bla-bla
+=======
+                      bla-bla-bla2
+>>>>>>> f19bba9 (bla2)
