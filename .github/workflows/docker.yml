@@ -24,7 +24,7 @@ jobs:
         steps:
             - name: Display Service Image Info
               run: |
-                  echo '${{ toJson(jobs.services) }}'
+                  echo '${{ toJson(job.services) }}'
             - name: Display Node.js version
               run: |
                   node -v
