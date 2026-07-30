@@ -14,3 +14,8 @@ jobs:
               run: |
                   node -v
                   cat /etc/os-release
+            - name: Another node image test
+              uses: docker://node:22-trixie-slim
+              with:
+                  entrypoint: /bin/bash
+                  args: -c "node -v && cat /etc/os-release"
