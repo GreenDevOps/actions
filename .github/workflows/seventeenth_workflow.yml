@@ -21,4 +21,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Display output from reusable workflow
-              run: echo "The current date and time is: ${{ needs.call-workflow.outputs.date }}"
+              run: 'echo "The current date and time is: ${{ needs.call-workflow.outputs.date }}"'
