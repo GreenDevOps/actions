@@ -4,7 +4,7 @@ jobs:
     test-docker-container:
         runs-on: ubuntu-latest
         container:
-            image: node:12
+            image: node:13
             env:
                 NODE_ENV: test
             ports:
