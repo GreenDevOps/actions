@@ -7,6 +7,10 @@ on:
                 required: false
                 type: string
                 default: "Default Test Title"
+        outputs:
+            date:
+                description: "The current date and time"
+                value: ${{ jobs.generate-output.outputs.date }}
 
 jobs:
     conslole-log:
@@ -14,3 +18,10 @@ jobs:
         steps:
             - name: Print Title
               run: 'echo "The title is: ${{ github.event.inputs.title }}"'
+    generate-output:
+        runs-on: ubuntu-latest
+        outputs:
+            date: ${{ steps.set-output.outputs.date }}
+        steps:
+            - run: echo "date=$(date)" >> $GITHUB_OUTPUT
+              id: set-output
