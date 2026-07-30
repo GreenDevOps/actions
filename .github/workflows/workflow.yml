@@ -6,11 +6,11 @@ on:
                 description: "The title to use in the workflow"
                 required: false
                 type: string
-                default: "Default Title"
+                default: "Default Test Title"
 
 jobs:
     conslole-log:
         runs-on: ubuntu-latest
         steps:
-            - name: Call workflow with title input
+            - name: Print Title
               run: 'echo "The title is: ${{ github.event.inputs.title }}"'

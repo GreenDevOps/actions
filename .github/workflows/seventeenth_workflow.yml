@@ -6,9 +6,9 @@ on:
                 description: "The title to use in the workflow"
                 required: false
                 type: string
-                default: "Default Title"
+                default: "Default Test Title"
 jobs:
     call-workflow:
         uses: "./.github/workflows/workflow.yml"
         with:
-            title: ${{ inputs.title }}
+            title: ${{ github.event.inputs.title }}
