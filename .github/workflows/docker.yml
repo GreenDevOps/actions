@@ -24,8 +24,7 @@ jobs:
         steps:
             - name: Display Service Image Info
               run: |
-                  echo "Service Image Info:"
-                  docker inspect customMysql
+                  echo '${{ toJson(jobs.services) }}'
             - name: Display Node.js version
               run: |
                   node -v
